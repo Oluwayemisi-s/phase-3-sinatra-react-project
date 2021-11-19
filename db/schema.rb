@@ -12,18 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_11_16_233102) do
 
-  create_table "actors", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "characters", force: :cascade do |t|
-    t.string "character_name"
-    t.integer "movie_id"
-    t.integer "actor_id"
-    t.index ["actor_id"], name: "index_characters_on_actor_id"
-    t.index ["movie_id"], name: "index_characters_on_movie_id"
-  end
-
   create_table "movie_selections", force: :cascade do |t|
     t.integer "profile_id"
     t.integer "movie_id"
