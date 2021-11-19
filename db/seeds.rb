@@ -438,10 +438,62 @@ allObjects << eachObject
 #Movie.create(title: response['title'], genre: response['genre'], description: response['overview'], thumbnail: response['poster_path'], backdrop: response['backdrop_path'], rating: response['vote_average'], runtime: response['runtime'], release_date: response['release_date'], movie_link: response['video'])
 i+=1
 response.to_json if response.code == 200
-
 end
 
+Movie.create(
+title: "The Invention of Lying",
+genre: "Comedy", 
+description: "A comedy set in a world where no one has ever lied, until a writer seizes the opportunity for personal gain. It's a world where everyone tells the truth - and just about anything they're thinking. Mark Bellison is a screenwriter, about to be fired.", 
+thumbnail: "https://flxt.tmsimg.com/assets/p182956_p_v10_aa.jpg", 
+backdrop: "https://www.slantmagazine.com/wp-content/uploads/2009/09/inventionoflying.jpg", 
+rating: 6.4, 
+runtime: 100, 
+release_date: "2009", 
+movie_link:"https://www.youtube.com/watch?v=FkrlYQy_zK8&t=150s")
 
+Movie.create(
+title: "Millennium Actress",
+genre: "Drama", 
+description: "When the legendary Ginei Studios shuts down, filmmaker Genya Tachibana and his assistant are tasked with interviewing its reclusive star, Chiyoko Fujiwara, who had retired from the spotlight 30 years prior. As she recounts her career, Genya and his crew are literally pulled into her memories where they witness her chance encounter with a mysterious man on the run from the police. Despite never knowing his name or his face, Chiyoko relentlessly pursues that man in a seamless blend of reality and memory.", 
+thumbnail: "https://i.pinimg.com/originals/c0/f2/d7/c0f2d780317aabe0a521c61b6a5cfff2.jpg", 
+backdrop: "https://image.tmdb.org/t/p/w1280/h0cP6cGf3uIHQuuxh6NSzeWUUf2.jpg", 
+rating: 10, 
+runtime: 84, 
+release_date: "2001", 
+movie_link:"https://www.youtube.com/watch?v=3KasqdsIaIs&t=381s")
+
+Movie.create(
+title: "Trigun: Badlands",
+genre: "Drama", 
+description: "A gunfighter with a strict no-kill policy, Vash the Stampede arrives in a town full of bounty hunters competing to collect the reward for catching a robber he saved 20 years ago.", 
+thumbnail: "https://m.media-amazon.com/images/M/MV5BNzMzNTJjMTUtNDZjYy00ZWY5LWI1NGMtNTIzMjJjN2Y3MjNkXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_.jpg", 
+backdrop: "https://media2.fdncms.com/sacurrent/imager/trigun-badlands-rumble-gekijouban-trigun/u/original/2242478/1171437.jpg", 
+rating: 10, 
+runtime: 90, 
+release_date: "2010", 
+movie_link:"https://www.youtube.com/watch?v=nyAVXzn3dL4")
+
+Movie.create(
+title: "Ms:DoubtFire",
+genre: "Comedy", 
+description: "After a bitter divorce, an actor disguises himself as a female housekeeper to spend time with his children held in custody by his former wife.", 
+thumbnail: "https://m.media-amazon.com/images/I/71CpVJxd1mL._SL1500_.jpg", 
+backdrop: "https://i.guim.co.uk/img/media/2da7f075b680cfda82204b9af98028c3abf751a8/0_28_3360_2015/master/3360.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=4a0f03f4d12d25722cc31939646a2373", 
+rating: 10, 
+runtime: 123, 
+release_date: "1993", 
+movie_link:"https://www.youtube.com/watch?v=SucV6rhCuMA")
+
+Movie.create(
+title: "Dragon Ball Super - Broly",
+genre: "Documentary", 
+description: "Goku and Vegeta encounter Broly, a Saiyan warrior unlike any fighter they've faced before.", 
+thumbnail: "https://i.pinimg.com/originals/c8/52/a3/c852a3c000ae14989306ee055379bea6.jpg", 
+backdrop: "https://i.pinimg.com/originals/d2/8e/0a/d28e0a6e5e421f9d27d0f4dcd13784a3.jpg", 
+rating: 10, 
+runtime: 101, 
+release_date: "2018", 
+movie_link:"https://www.youtube.com/watch?v=nCt5z-mnHZY")
 
 
 allObjects.map{|eachObject|  
@@ -456,37 +508,24 @@ runtime: eachObject[:runtime],
 release_date: response[:release_date], 
 movie_link: response[:movie_link])}
 
-Movie.create(
-title: "The Invention of Lying",
-genre: "Comedy", 
-description: "eachObject[:description]", 
-thumbnail: "https://flxt.tmsimg.com/assets/p182956_p_v10_aa.jpg", 
-backdrop: "https://www.slantmagazine.com/wp-content/uploads/2009/09/inventionoflying.jpg", 
-rating: 6.4, 
-runtime: 100, 
-release_date: "2009", 
-movie_link:"https://www.youtube.com/watch?v=FkrlYQy_zK8&list=PLHPTxTxtC0ibVZrT2_WKWUl2SAxsKuKwx&index=63")
-
-Movie.create(
-title: "Millennium Actress",
-genre: "Drama", 
-description: "When the legendary Ginei Studios shuts down, filmmaker Genya Tachibana and his assistant are tasked with interviewing its reclusive star, Chiyoko Fujiwara, who had retired from the spotlight 30 years prior. As she recounts her career, Genya and his crew are literally pulled into her memories where they witness her chance encounter with a mysterious man on the run from the police. Despite never knowing his name or his face, Chiyoko relentlessly pursues that man in a seamless blend of reality and memory.", 
-thumbnail: "https://pics.filmaffinity.com/Millennium_Actress-864201341-large.jpg", 
-backdrop: "https://epochemagazine.org/wp-content/uploads/post//15.03.01-Hero.png", 
-rating: 10, 
-runtime: 84, 
-release_date: "2001", 
-movie_link:"https://www.youtube.com/watch?v=3KasqdsIaIs&list=PLHPTxTxtC0ibVZrT2_WKWUl2SAxsKuKwx&index=159")
-
-
 
 avatar = ["https://cdn.pixabay.com/photo/2020/10/11/18/45/cow-5646719__480.png", 
 "https://cdn.pixabay.com/photo/2021/01/08/10/02/monkey-5899489__480.png",
-"https://cdn4.iconfinder.com/data/icons/animal-2-1/100/animal-19-512.png,",
+"https://cdn4.iconfinder.com/data/icons/animal-2-1/100/animal-19-512.png",
 "https://images.clipartlogo.com/files/istock/previews/1026/102672691-animal-emotion-avatar-vector-icon.jpg",
 "https://library.kissclipart.com/20180917/xzw/kissclipart-animal-avatar-icon-clipart-owl-computer-icons-gian-89b9976cf9dcaaa2.png",
-"https://cdn.imgbin.com/3/16/6/imgbin-geometric-wolf-avatar-XKYvCD5J4tGSSn5pAtkWgmA9s.jpg"
+"https://cdn.imgbin.com/3/16/6/imgbin-geometric-wolf-avatar-XKYvCD5J4tGSSn5pAtkWgmA9s.jpg",
+"https://cdn.imgbin.com/13/1/19/imgbin-giant-panda-dog-cat-avatar-fox-animal-tag-Uqq3EYaSDG4tK4xae8uhP1FvQ.jpg",
+"https://png.pngtree.com/png-clipart/20191121/original/pngtree-cute-dog-and-hat-avatar-with-a-yellow-background-png-image_5147708.jpg",
+"https://png.pngtree.com/png-clipart/20200224/original/pngtree-cute-pug-avatar-with-a-yellow-background-png-image_5205701.jpg",
+"https://image.freepik.com/free-vector/illustration-cute-pug-avatar_79416-109.jpg",
+"https://images.freeimg.net/rsynced_images/puppy-on-green.jpg",
+"https://media.istockphoto.com/vectors/cute-dogicon-vector-id477760047?b=1&k=20&m=477760047&s=612x612&w=0&h=7Jamig6T0YVAIWctbQSElrsp3muuJcLkLQmR7w-GMb4=",
+"https://png.pngtree.com/png-vector/20201224/ourlarge/pngtree-cute-animal-cartoon-mouse-avatar-vector-png-image_2591554.jpg",
+"https://image.freepik.com/free-vector/cute-baby-koala-wild-african-animal-avatar-portrait-illustration-isolated-white-design-baby-print-postcard-clothing-banner-clipart-fun_456865-24.jpg",
+"https://st.depositphotos.com/1738826/1265/i/600/depositphotos_12658018-stock-photo-cute-cow-head-cartoon.jpg"
 ]
+
 
 5.times do
     profile_img = avatar.sample
